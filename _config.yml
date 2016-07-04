@@ -56,7 +56,7 @@ gahandler: 'UA-52149651-1'
 footersvg: 'true'
 
 # Disqus
-disqushandler: 'blog'
+disqushandler: 'test'
 
 # Blog Configurations
 paginate: 10 # Posts per page on the blog index
