@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  유니티 입문
+title:  Unty Basic
 date:   2016-07-04 오전 4:33:22
 categories: Unity
 tags: Unity
