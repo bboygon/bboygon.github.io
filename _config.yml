@@ -12,7 +12,7 @@ gems: [jekyll-paginate]
 permalink:        /blog/:year/:month/:day/:title
 
 # Setup
-title:            'Jekyll Metro'
+title:            '게임 디자이너 장재곤 블로그'
 tagline:          'A Metro theme for Jekyll'
 description:      'A Sample blog using Jekyll Metro'
 url:              ''
@@ -35,7 +35,7 @@ navigation:
 
 
 # Author Details
-author:         'Abdel Raoof Olakara'
+author:         'Chaegon Chang'
 
 #Social Media links (Use complete URL except for email)
 dribbble:

@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  Unty Basic
+title:  Unity Basic
 date:   2016-07-04 오전 4:33:22
 categories: Unity
 tags: Unity
@@ -10,113 +10,44 @@ tags: Unity
 * * *
 
 # 유니티 개념 학습
-유니티 공식 문서를 통한 유니티3D 엔진의 기본 개념과 워크 플로우, 인터페이스를 학습합니다.
+목표 : 유니티 공식 문서를 통한 유니티3D 엔진의 기본 개념과 워크 플로우, 인터페이스를 학습합니다.
 
-[공식 문서 링크](http://unity3d.com/kr/learn/tutorials/topics/virtual-reality)
-
-- 유니티 다운로드 및 설치
-- 유니티 작업 프로세스
-- 에디터 컨트롤 및 기능 창 설명
-- 게임 플레이를 위한 설명
-	- 게임 씬
-	- 게임오브젝트
-	- 프리팹
-	- 스크립트
-	- 입력
-	- 라이팅
-	- 카메라
-- 빌드 세팅 및 배포
-
+[공식 문서 링크](http://docs.unity3d.com/kr/current/Manual/UnityOverview.html)
 
 - - -
 
+# 유니티 다운로드 및 설치
+유니티 에디터는 [http://unity3d.com/download](http://unity3d.com/download) 를 통해서 다운로드를 받을 수 있습니다. Assistant를 통해 다운받은 뒤 실행하면 설치를 진행할 수 있습니다. 
+
+![](http://docs.unity3d.com/kr/current/uploads/Main/UnityDownloadAssistant_v52_75.png ){:class="img-responsive"}
+
+유니티에서 만든 프로그램이 하나의 워크 스테이션에서 다양한 플랫폼으로 빌드될 수 있도록 지원하기 때문에 설치화면을 살펴보면 설치를 원하는 플랫폼을 체크하여 설치를 진행할 수 있습니다.
+
+기본적인 선택사항은 Unity에디터, 설명서, 웹플레이어, 스탠다드 애셋, 비주얼 스튜디오 커뮤니티, 윈도우 빌드 지원이고, 추가적으로 안드로이드, IOS, 리눅스, 맥 등등을 선택할 수 있습니다.
+
+- - -
+
+# 첫 프로젝트 시작
+
+설치를 다 마친 유니티를 실행하면 곧바로 프로젝트를 생성할 수 있습니다.   
+
+![](http://docs.unity3d.com/kr/current/uploads/Main/StartingUnityForTheFirstTime75.png)
+
+새로운 프로젝트를 시작하면 프로젝트명과 프로젝트 폴더의 위치를 지정하고, 프로젝트의 기본 환경을 2D로 할지 3D로 할지 결정합니다. Asset Packages 는 애셋 스토어를 통해 다운받은 애셋들을 프로젝트 시작과 함께 추가할 수 있는 기능을 제공합니다.
+
+![](http://docs.unity3d.com/kr/current/uploads/Main/CreatingAProject75pic3.png)
+
+프로젝트 생성을 마치면 에디터 화면으로 이동하게 됩니다. 다른 프로젝트를 열고 싶다면
+
+![](http://docs.unity3d.com/kr/current/uploads/Main/FileOpenProjectDropdown.png)
+
+File - Open Project 를 선택하여 원하는 프로젝트를 열 수 있습니다. 
+
+![]({{site.url}}/downloads/unity_main_view.png ){:class="img-responsive" height="400px" width="800px"}
 
 
-# 스크립트를 통한 오브젝트 컨트롤
-유니티에서 지원하는 스크립트의 동작과정을 살펴보고 어떻게 만들어 적용하는지에 대해 알아봅니다.
-
-시나리오 : 오브젝트를 일정하게 회전시키고 싶다.
-
-- GameObject -> 3D Object -> Cube
-- Project View
-	- 우클릭 -> Create -> C# Script -> 'Cube Script' 로 명명
-	- Rename 'Cube'
-	- Cube Script 를 Cube 오브젝트에 끌어다 놓기
-	- ![]({{site.url}}/downloads/aaa.png ){:class="img-responsive" height="400px" width="800px"}
-
-- CubeScript 파일 더블 클릭
-- 열린 스크립트 파일 내부의 Update 함수를 수정
-
-{% highlight ruby %}
-void Update()
-{
-	transform.Rotate(new Vector3(1.0f, 1.0f, 1.0f));
-}
-{% endhighlight %}
-
-시나리오 구현
-
-- 오브젝트를
-	- Cube
-- 일정하게
-	- new Vector3(1.0f,1.0f,1.0f)
-- 회전시키고 싶다. 
-	- transform.Rotate()
-
-- - - 
-
-# 키입력을 통한 오브젝트 컨트롤
-유니티에서 오브젝트를 컨트롤하는 데 있어 입력처리를 어떻게 하는지 알아봅니다.  
-
-시나리오 : 오브젝트 속도가 다르게 회전시키고 싶다.
-
-**CubeScript에서 다음과 같이 수정**
-
-{% highlight ruby %}
-
-public class CubeScript : MonoBehaviour{
-	public float rotationSpeed;
-
-	void Update(){
-		transform.Rotate(new Vector3(rotationSpeed,rotationSpeed,rotationSpeed));
-	}
-}
-{% endhighlight %}
-
-- Cube 오브젝트를 클릭
-	- Play 클릭
-	- 인스펙터창에서 Cube Script 컴포넌트의 Rotation Speed 값을 1로 변경
-	- Cube 동작 확인
-	- Play 끄기, Roation Speed 값 확인
-- Rotation Speed 값을 5으로 변경
-	- Play 클릭, Cube 동작 확인
-	- Rotation Speed 속성에 마우스 오버 후 좌우 드래그 
-	- Cube 동작 확인
-
-시나리오 구현
-
-- 오브젝트 속도
-	-  변수를 만들고 public float rotationSpeed
-- 가 다르게 회전시키고 싶다.
-	- Rotate 함수에 변수를 지정 Rotate(rotationSpeed, ...)
-
-**키입력을 통해 해당 Rotation Speed 값을 제어**
-
-시나리오 : 스페이스 바를 누르는 동안만 회전한다.
-
-{% highlight ruby %}
-void Update () {
-        if(Input.GetKey(KeyCode.Space))
-            transform.Rotate(new Vector3(rotationSpeed, rotationSpeed, rotationSpeed));
-    }
-{% endhighlight %}
+단, 유니티 에디터당 하나의 프로젝트만 열 수 있으면 다수를 프로젝트를 열고 싶은 경우, 유니티 아이콘을 새로
+열기를 하면 여러 개의 유니티 에디터를 띄울 수 있습니다.
 
 
-시나리오 구현
-
-- 스페이스 바를
-	- KeyCode.Space
-- 누르는 동안만
-	- if(Input.GetKey(...))  
-
-
+- - -
