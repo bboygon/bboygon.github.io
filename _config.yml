@@ -2,6 +2,8 @@
 markdown: kramdown
 markdown_ext:  markdown,mkdown,mkdn,mkd,md
 highlighter: rouge
+timezone: Asia/Seoul
+future: true
 
 # Needed for backward compatibility
 gems: [jekyll-paginate]
