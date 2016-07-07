@@ -2,8 +2,8 @@
 layout: post
 title:  Interaction VR Scenario  
 date:   2016-07-07 오전 4:57:24 
-categories: Unity
-tags: NIPA
+categories: NIPA
+tags: NIPA InteractionVR
 ---
 
 - - -

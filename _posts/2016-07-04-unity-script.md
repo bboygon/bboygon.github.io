@@ -15,7 +15,7 @@ tags: Unity
 # 변수 Variable
 변수는 값을 저장할 수 있는 데이터로 변수를 선언하고 값을 대입하는 방식으로 구성됩니다.
 
-{% highlight ruby %}
+{% highlight csharp %}
 
 float sample; //선언
 sample = 0.1f; //대입
@@ -30,7 +30,7 @@ bool hasChecked = true;
 - 특정 변수를 외부(인스펙터 뷰)에 노출시켜 값을 제어하고 싶을 땐 public을 사용합니다.
 - 외부에 노출시키지 않고 스크립트 내부, 함수 안에서만 제어하고 싶을 땐 private를 붙이거나 아무것도 붙이지 않습니다.
 
-{% highlight ruby %}
+{% highlight csharp %}
 
 // 접근제어정도 데이터타입 변수명
 public float sample; //public 이므로 외부에서 접근가능
@@ -42,7 +42,7 @@ float sample; 위와 동일
 # 변수의 범위
 변수를 사용할 때 선언하는 위치에 따라 동작방식이 달라집니다. 아래와 같이 함수내에서 변수를 선언한다면 지역 변수(Local Variable)라고 하며, 함수가 시작할 때 변수가 생성되고, 실행이 끝나면 변수도 없어집니다.
 
-{% highlight ruby %}
+{% highlight csharp %}
 
 void Update()
 {
@@ -71,7 +71,7 @@ void Update()
 - CubeScript 파일 더블 클릭
 - 열린 스크립트 파일 내부의 Update 함수를 수정
 
-{% highlight ruby %}
+{% highlight csharp %}
 void Update()
 {
 	transform.Rotate(new Vector3(1.0f, 1.0f, 1.0f));
@@ -96,7 +96,7 @@ void Update()
 
 **CubeScript에서 다음과 같이 수정**
 
-{% highlight ruby %}
+{% highlight csharp %}
 
 public class CubeScript : MonoBehaviour{
 	public float rotationSpeed;
@@ -128,7 +128,7 @@ public class CubeScript : MonoBehaviour{
 
 시나리오 : 스페이스 바를 누르는 동안만 회전한다.
 
-{% highlight ruby %}
+{% highlight csharp %}
 void Update () {
         if(Input.GetKey(KeyCode.Space))
             transform.Rotate(new Vector3(rotationSpeed, rotationSpeed, rotationSpeed));
@@ -149,7 +149,7 @@ void Update () {
 
 시나리오 : 키입력을 받아 전/후진, 회전을 하고 싶다.
 
-{% highlight ruby %}
+{% highlight csharp %}
 {	
 	void Update()
 	{

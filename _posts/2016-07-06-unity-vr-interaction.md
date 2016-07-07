@@ -15,7 +15,7 @@ VR 카메라는 위치가 변하지 않기 때문에 위치를 변경하고 싶�
 
 이 코드로 렌더 스케일을 조정할 수 있습니다.
 
-{% highlight ruby %}
+{% highlight csharp %}
 
 using UnityEngine;
 using System.Collections;
@@ -35,11 +35,4 @@ namespace VRStandardAssets.Examples
 }
 
 {% endhighlight %}
-
-
-
-
-
-# 헤드 트래킹을 통한 인터렉션 처리
-
 

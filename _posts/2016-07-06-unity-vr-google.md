@@ -70,7 +70,7 @@ EventTarget 게임 오브젝트에 인터렉션시 어떤 변화를 줄지를 �
 
 
 
-{% highlight ruby %}
+{% highlight csharp %}
 
 using UnityEngine;
 using System.Collections;
@@ -145,7 +145,7 @@ public class RadialCutoutMenu : MonoBehaviour {
 Raw Parse Data
 
 
-{% highlight ruby %}
+{% highlight csharp %}
 
 using UnityEngine;
 using System.Collections;

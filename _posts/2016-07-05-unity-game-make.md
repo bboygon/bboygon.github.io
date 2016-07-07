@@ -44,7 +44,7 @@ Scenes에는 게임의 오브젝트가 포함되어 있습니다. 씬을 사용�
 # 태그와 레이어
 태그는 해당 게임오브젝트를 정의하는 단어입니다. 태그의 목적은 스크립트에서 제어하기 위함인데 "Player", "Enemy" 와 같은 태그를 가진 오브젝트를 찾을 때 사용할 수 있습니다.
 
-{% highlight ruby %}
+{% highlight csharp %}
 
 using UnityEngine;
 using System.Collections;
