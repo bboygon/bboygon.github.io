@@ -41,6 +41,19 @@ public class BuildTest : MonoBehaviour{
 
 	}
 
+	//외부 인터렉션 후 트리거 활성화 - 씬파일명으로
+	public void LoadScene(string name)
+	{
+		SceneManager.LoadScene(name);
+	}
+
+
+	//외부 인터렉션 후 트리거 활성화 - 인덱스으로
+	public void LoadScene(int index)
+	{
+		SceneManager.LoadScene(index);
+	}
+
 }
 
 {% endhighlight %}
