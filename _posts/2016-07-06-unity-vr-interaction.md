@@ -1,9 +1,9 @@
 ---
 layout: post
-title:  Unity VR Interaction
+title:  인터렉션 처리
 date:   2016-07-06 오전 2:10:33 
 categories: Unity
-tags: Unity VR
+tags: UnityVR
 ---
 
 
